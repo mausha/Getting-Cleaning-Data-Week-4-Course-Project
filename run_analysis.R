@@ -86,9 +86,6 @@ rm(testSubjectData, testActivityData, testActivityWithLabels, testMeasureData)
 
 # Combine the train and test data together into a single data set.
 allData <- rbind(trainData, testData)
-# print(dim(trainData))
-# print(dim(testData))
-# print(dim(allData))
 rm(trainData, testData)
 
 
@@ -137,3 +134,22 @@ averageBySubjectAndActivity <- arrange(meanAndStdData, subject_id, activity_labe
                                ungroup()
 rm(meanAndStdData)
 
+
+###############################################################################
+# 6) Save the new tidy data set created in step 5 above as a txt file created 
+#    with write.table() using row.name=FALSE.
+write.table(averageBySubjectAndActivity, 
+            file = "Getting-Cleaning-Data-Course-Tidy-Data.txt", 
+            row.names = FALSE)
+
+
+###############################################################################
+# Code to load and view the tidy data that was just written out to the text file.
+# Uncomment and run the following code: 
+#
+# data <- read.table("Getting-Cleaning-Data-Course-Tidy-Data.txt", header = TRUE)
+# View(data)
+
+###############################################################################
+#############################       End of file.        #######################
+###############################################################################
