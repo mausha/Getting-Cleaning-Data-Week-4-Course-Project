@@ -1,5 +1,11 @@
 # Getting-Cleaning-Data-Week-4-Course-Project
 
+The purpose of this project is to demonstrate my ability to collect, work with, and clean a data set. The goal is to prepare tidy data that can be used for later analysis. The data set created through this project is a tidy data set because it has the following three characteristics as defined by Hadley Wickham in the [Tidy Data Paper](https://vita.had.co.nz/papers/tidy-data.pdf):
+
+1. Each variable forms a column.
+2. Each observation forms a row.
+3. Each type of observational unit forms a table.
+
 This R project contains the following files:
 
 * **"CodeBook.md"** - the CodeBook in R markdown format describing:
@@ -19,5 +25,5 @@ View(data)
 * **"Getting-Cleaning-Data-Week-4-Course-Project.Rproj"** - the RStudio project file
 * **"README.html"** - the HTML version of this file generated from the R markdown version
 * **"README.md"** - the R markdown version of this README file which describes the contents of the git repository and the relationship between the files
-* **"run_analysis.R"** - the R script that processed the original source data in order to produce the new tidy data set contained in the the "Getting-Cleaning-Data-Course-Tidy-Data.txt" text file.
+* **"run_analysis.R"** - the R script that processed the original source data in order to produce the new tidy data set contained in the "Getting-Cleaning-Data-Course-Tidy-Data.txt" text file.
 * **"UCI HAR Dataset"** - the directory containing all of the original source data (the contents from the "getdata_projectfiles_UCI HAR Dataset.zip" file).

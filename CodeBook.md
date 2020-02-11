@@ -11,7 +11,11 @@ output:
 
 ## Introduction
 
-This codebook describes a tidy dataset created from data collected from the accelerometers from the Samsung Galaxy S smartphone. 
+This codebook describes a tidy dataset created from data collected from the accelerometers from the Samsung Galaxy S smartphone. The data set created through this project is a tidy data set because it has the following three characteristics as defined by Hadley Wickham in the [Tidy Data Paper](https://vita.had.co.nz/papers/tidy-data.pdf):
+
+1. Each variable forms a column.
+2. Each observation forms a row.
+3. Each type of observational unit forms a table.
 
 ## Source Data
 
