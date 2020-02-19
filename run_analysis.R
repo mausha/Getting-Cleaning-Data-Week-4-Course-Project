@@ -17,7 +17,16 @@ library(tidyr)
 library(tidyselect)
 
 ###############################################################################
-# 0) Load all of the required data from the data set. 
+# 0) Download and unzip the data files and then load all of the required 
+#    data from the data set. 
+
+# Download the zip file if it doesn't already exist in the project folder
+# and then unzip it.
+if (!file.exists("getdata_projectfiles_UCI_HAR_Dataset.zip")) {
+  download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip", 
+                destfile = "getdata_projectfiles_UCI_HAR_Dataset.zip")
+  unzip("getdata_projectfiles_UCI_HAR_Dataset.zip")
+}
 
 # Load the activity and measurement labels, converting the id columns to integer.
 activityLabels <- as_tibble(read.csv("UCI HAR Dataset\\activity_labels.txt", header=FALSE, 
@@ -102,7 +111,7 @@ allDataNames <- names(allData)
 selectedColumns <- c(vars_select(allDataNames, one_of(c("subject_id", "activity_label"))),
                      vars_select(allDataNames, contains("mean_val")),
                      vars_select(allDataNames, contains("std_val")))
-meanAndStdData <- select(allData, selectedColumns)
+meanAndStdData <- select(allData, all_of(selectedColumns))
 rm(allData, allDataNames)
 
 
